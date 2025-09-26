@@ -6,6 +6,7 @@ body {
     font-size: 15px;
   }
   
+  /* terminal */
   .terminal {
     max-width: 800px;
     margin: 3rem auto;
@@ -13,6 +14,9 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,.5);
     overflow: hidden;
     border: 1px solid #222;
+    min-height: 60vh; /* ocupa mínimo o 60% da pantalla */
+    display: flex;
+    flex-direction: column;
   }
   
   .header {
@@ -24,7 +28,7 @@ body {
     font-size: .8rem;
     color: #888;
   }
-  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; cursor: pointer; }
   .red { background: #ff5f56; }
   .yellow { background: #ffbd2e; }
   .green { background: #27c93f; }
@@ -34,7 +38,9 @@ body {
     background: #0f0f0f;
     padding: 1rem 1.2rem;
     line-height: 1.6;
-    min-height: 300px;
+    flex: 1;
+    overflow-y: auto;
+    word-wrap: break-word; /* evita scroll horizontal en liñas longas */
   }
   
   .prompt { color: #27c93f; }
@@ -51,14 +57,36 @@ body {
     color: #e5e5e5;
     font: inherit;
     flex: 1;
+    min-width: 0;
   }
   
   a {
     color: #61afef;
     text-decoration: none;
+    word-break: break-word;
   }
   a:hover { text-decoration: underline; }
   
+  /* estados da xanela */
+  .terminal.minimized .content {
+    display: none;
+  }
+  
+  .terminal.maximized {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    z-index: 9999;
+  }
+  .terminal.maximized .content {
+    height: calc(100% - 30px); /* header height */
+    overflow-y: auto;
+  }
+  
+  /* hints + botón */
   .hints {
     text-align: center;
     color: #666;
@@ -83,6 +111,7 @@ body {
     border-color: #27c93f;
   }
   
+  /* footer */
   footer {
     text-align: center;
     padding: 2rem 1rem;
@@ -90,4 +119,16 @@ body {
     color: #666;
   }
   
+  /* 📱 responsivo */
+  @media (max-width: 768px) {
+    body { font-size: 14px; }
+    .terminal { margin: 1.5rem; min-height: 50vh; }
+  }
+  
+  @media (max-width: 480px) {
+    body { font-size: 13px; }
+    #cmd { font-size: 13px; }
+    .title { display: none; } /* oculta o título na barra para gañar espazo */
+    .terminal { margin: 1rem; min-height: 40vh; }
+  }
   
