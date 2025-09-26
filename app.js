@@ -62,10 +62,10 @@ function runCommand(cmd) {
       print("a. morón — teacher · developer · galician");
       break;
     case "whereami":
-      print("compostela (sometimes vigo, always galicia)");
+      print("compostela (sometimes vigo, always galiza)");
       break;
     case "job":
-      print("teacher of greek & latin · creator of apps and repos");
+      print("teacher of greek & latin");
       break;
     case "ls":
         Object.keys(projects)
