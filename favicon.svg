@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Cabeza -->
+  <circle cx="50" cy="40" r="25" fill="black"/>
+  
+  <!-- Gafas redondas -->
+  <circle cx="38" cy="40" r="8" fill="none" stroke="white" stroke-width="3"/>
+  <circle cx="62" cy="40" r="8" fill="none" stroke="white" stroke-width="3"/>
+  <line x1="46" y1="40" x2="54" y2="40" stroke="white" stroke-width="2"/>
+  
+  <!-- Bigote -->
+  <path d="M42 52c3 2 6 2 8 0m8 0c-3 2-6 2-8 0" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Pelo curto estilizado (media lúa arriba) -->
+  <path d="M25 35c5-15 45-15 50 0" fill="black"/>
+  
+  <!-- Ombreiros -->
+  <rect x="30" y="65" width="40" height="20" rx="10" fill="black"/>
+</svg>

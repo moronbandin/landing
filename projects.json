@@ -1,0 +1,43 @@
+{
+    "cucla": {
+      "url": "https://moronbandin.github.io/cucla/",
+      "short": "materiais de cultura clásica",
+      "desc": "repositorio con materiais didácticos de cultura clásica para secundaria."
+    },
+    "latout": {
+      "url": "https://moronbandin.github.io/latout/",
+      "short": "materiais de latín",
+      "desc": "repositorio con materiais para latín en secundaria e bacharelato."
+    },
+    "grego": {
+      "url": "https://moronbandin.github.io/grego/",
+      "short": "materiais de grego",
+      "desc": "repositorio con materiais para grego en secundaria e bacharelato."
+    },
+    "concelhos": {
+      "url": "https://moronbandin.github.io/concelhos/",
+      "short": "xogo dos concellos",
+      "desc": "xogo interactivo de adiviñar todos os concellos da galiza."
+    },
+    "buscaminas": {
+      "url": "https://moronbandin.github.io/buscaminas/",
+      "short": "lumes na Galiza",
+      "desc": "buscaminas reivindicativo para concienciar sobre os incendios forestais na galiza."
+    },
+    "bingogrego": {
+      "url": "https://bingogrego.streamlit.app/",
+      "short": "bingo do alfabeto",
+      "desc": "bingo interactivo do alfabeto grego con xerador de cartóns."
+    },
+    "mermado": {
+      "url": "https://mermado.streamlit.app/",
+      "short": "microtorrado",
+      "desc": "calculadora profesional de merma e beneficio para microtorradores de café."
+    },
+    "wikisalto": {
+      "url": "https://wikisalto.streamlit.app/",
+      "short": "xogo de hipervínculos",
+      "desc": "conecta dúas páxinas reais da wikipedia só con hipervínculos azuis, acumulando puntos."
+    }
+  }
+  

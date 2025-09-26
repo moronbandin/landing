@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background: #0f0f0f;
+    color: #e5e5e5;
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+  }
+  
+  .terminal {
+    max-width: 800px;
+    margin: 3rem auto;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    overflow: hidden;
+    border: 1px solid #222;
+  }
+  
+  .header {
+    background: #1a1a1a;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .8rem;
+    color: #888;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .red { background: #ff5f56; }
+  .yellow { background: #ffbd2e; }
+  .green { background: #27c93f; }
+  .title { margin-left: .5rem; font-size: .8rem; }
+  
+  .content {
+    background: #0f0f0f;
+    padding: 1rem 1.2rem;
+    line-height: 1.6;
+    min-height: 300px;
+  }
+  
+  .prompt { color: #27c93f; }
+  
+  .input-line {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  #cmd {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e5e5e5;
+    font: inherit;
+    flex: 1;
+  }
+  
+  a {
+    color: #61afef;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+  
+  .hints {
+    text-align: center;
+    color: #666;
+    font-size: .85rem;
+    margin-top: 1rem;
+  }
+  
+  #showProjects {
+    margin-top: .6rem;
+    background: none;
+    border: 1px solid #444;
+    color: #ccc;
+    padding: .3rem .8rem;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: .85rem;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  #showProjects:hover {
+    color: #fff;
+    border-color: #27c93f;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: .8rem;
+    color: #666;
+  }
+  
+  

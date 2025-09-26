@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>moronbandin — landing</title>
+  <meta name="description" content="moronbandin's landing page. repository of projects, teaching material and experimental apps." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal">
+    <div class="header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">bash — moronbandin</span>
+    </div>
+    <div class="content" id="terminal">
+      <div id="output"></div>
+      <div class="input-line">
+        <span class="prompt">moronbandin@gh-pages:~$</span>
+        <input id="cmd" type="text" autofocus autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <div class="hints">
+    try: <code>whoami</code> · <code>whereami</code> · <code>job</code> · <code>ls</code> · <code>info [project]</code>
+    <br><br>
+    <button id="showProjects">ver proxectos</button>
+  </div>
+
+  <footer>
+    © 2025 — moronbandin · GitHub Pages
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
