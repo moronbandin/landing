@@ -59,7 +59,7 @@ function runCommand(cmd) {
       print("available commands: whoami, whereami, job, ls, info [project], open [project], clear, exit, social");
       break;
     case "whoami":
-      print("a. morón — teacher · developer · galician");
+      print("a. morón — teacher · former ai researcher · galician");
       break;
     case "whereami":
       print("compostela (sometimes vigo, always galiza)");
