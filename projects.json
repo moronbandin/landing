@@ -38,6 +38,11 @@
       "url": "https://wikisalto.streamlit.app/",
       "short": "xogo de hipervínculos",
       "desc": "conecta dúas páxinas reais da wikipedia só con hipervínculos azuis, acumulando puntos."
+    },
+    "graphes": {
+      "url": "https://moronbandin.github.io/graphes/",
+      "short": "galería de imaxes en grego moderno",
+      "desc": "galería interactiva de cartaces, graffitis e pintadas da grecia contemporánea. serve para traballar a continuidade da lingua grega antiga na época actual."
     }
   }
   
