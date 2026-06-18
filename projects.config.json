@@ -1,0 +1,41 @@
+{
+  "githubUser": "moronbandin",
+  "defaults": {
+    "category": "Experimentos",
+    "includeForks": true
+  },
+  "projects": {
+    "bingo": {"title":"Bingo grego","category":"Aula","description":"Bombo interactivo e xerador de cartóns para practicar o alfabeto grego.","demo":"https://bingogrego.streamlit.app/","featured":true},
+    "bombo": {"title":"Bombo","category":"Aula","description":"Bombo dixital para actividades e dinámicas de aula."},
+    "buscaminas": {"title":"Buscaminas Galiza","category":"Xogos","description":"O buscaminas levado ao mapa galego para falar do territorio, do monte e dos eucaliptais.","demo":"https://moronbandin.github.io/buscaminas/","featured":true},
+    "buses-app": {"title":"Cando vén o bus?","category":"Ferramentas","description":"Aplicación web instalable para consultar horarios e organizar desprazamentos en bus.","demo":"https://moronbandin.github.io/buses-app/"},
+    "catao": {"title":"Catao","category":"Experimentos","description":"Prototipo web e laboratorio de ideas publicado como código aberto."},
+    "concelhos": {"title":"Concellos","category":"Xogos","description":"Xogo interactivo para localizar e aprender os concellos de Galiza.","demo":"https://moronbandin.github.io/concelhos/","featured":true},
+    "cucla": {"title":"Cultura clásica","category":"Aula","description":"Materiais abertos de cultura clásica para secundaria.","demo":"https://moronbandin.github.io/cucla/","featured":true},
+    "editorial": {"title":"Editorial","category":"Humanidades","description":"Ferramentas e fluxos de traballo para edición e publicación dixital."},
+    "elementos": {"title":"Elementos","category":"Aula","description":"Pequenas ferramentas didácticas e materiais reutilizables."},
+    "folia": {"title":"Folía","category":"Galiza","description":"Arquivo aberto de letras e pezas da música tradicional galega.","demo":"https://moronbandin.github.io/folia/","featured":true},
+    "graphes": {"title":"Graphes","category":"Humanidades","description":"Galería de letreiros, pintadas e palabras da Grecia contemporánea.","demo":"https://moronbandin.github.io/graphes/","featured":true},
+    "grego": {"title":"Suplemento de grego","category":"Aula","description":"Gramática, textos, léxico e recursos para aprender grego clásico.","demo":"https://moronbandin.github.io/grego/","featured":true},
+    "happyday": {"title":"Happy day","category":"Experimentos","description":"Un pequeno experimento construído con Python."},
+    "landing": {"title":"Este arquivo","category":"Ferramentas","description":"O código e o sistema de actualización automática desta colección de proxectos.","demo":"https://moronbandin.github.io/landing/"},
+    "latout": {"title":"Materiais de latín","category":"Aula","description":"Leccións, textos e materiais de latín para secundaria e bacharelato.","demo":"https://moronbandin.github.io/latout/","featured":true},
+    "library": {"title":"Biblioteca","category":"Humanidades","description":"Biblioteca dixital e ferramentas para explorar, traducir e traballar con textos."},
+    "mcr": {"title":"Ciencias das relixións","category":"Humanidades","description":"Notas e materiais sobre tradicións relixiosas e o seu impacto cultural.","demo":"https://moronbandin.github.io/mcr/"},
+    "mcr_docs": {"title":"Apuntes MCR","category":"Humanidades","description":"Edición navegable dos apuntes do mestrado en Ciencias das Relixións.","demo":"https://moronbandin.github.io/mcr_docs/"},
+    "merma": {"title":"Merma","category":"Ferramentas","description":"Calculadora de merma e rendemento para microtorradores de café.","demo":"https://mermado.streamlit.app/"},
+    "moronbandin": {"title":"Perfil de GitHub","category":"Ferramentas","description":"README e presentación do perfil público de GitHub."},
+    "proens": {"title":"Materiais docentes","category":"Aula","description":"Arquivo de recursos, textos, mapas e materiais para distintas materias."},
+    "prova": {"title":"Prova","category":"Ferramentas","description":"Plataforma experimental con frontend, backend e ferramentas de datos."},
+    "textos-grego": {"title":"Textos de grego","category":"Aula","description":"Colección e ferramentas para preparar textos de grego clásico."},
+    "vocab": {"title":"Vocabulario grego","category":"Aula","description":"Aplicación para estudar vocabulario grego con tarxetas e probas."},
+    "wikisalto": {"title":"Wikisalto","category":"Xogos","description":"Une dúas páxinas da Wikipedia saltando só polos seus hipervínculos.","demo":"https://wikisalto.streamlit.app/","featured":true},
+    "language-models": {"title":"Modelos de lingua galega","category":"Galiza","description":"Modelos de lingua abertos para o galego."},
+    "flashy_flashcards": {"title":"Flashy flashcards","category":"Aula","description":"Ferramentas para converter recursos léxicos clásicos en barallas de Anki."},
+    "fol-e-ar/map": {"title":"Fol e ar","category":"Galiza","description":"Mapa e arquivo web arredor da música e da cultura tradicional galega.","demo":"https://fol-e-ar.github.io/map/"},
+    "logosgnt/icaromenipo": {"title":"Icaromenipo","category":"Humanidades","description":"Edición web navegable do Icaromenipo de Luciano.","demo":"https://logosgnt.github.io/icaromenipo/"},
+    "logosgnt/logosgnt": {"title":"Logos GNT","category":"Humanidades","description":"Sitio e recursos do proxecto Logos GNT.","demo":"https://logosgnt.github.io/logosgnt/"},
+    "logosgnt/materiais": {"title":"Materiais Logos GNT","category":"Aula","description":"Materiais docentes e recursos abertos do proxecto Logos GNT."},
+    "greek-vocab-app": {"title":"Greek vocabulary trainer","category":"Aula","description":"Tarxetas e probas para estudar vocabulario grego.","repo":"https://github.com/moronbandin/vocab","include":true}
+  }
+}

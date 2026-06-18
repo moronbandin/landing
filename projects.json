@@ -1,48 +1,398 @@
-{
-    "cucla": {
-      "url": "https://moronbandin.github.io/cucla/",
-      "short": "materiais de cultura clásica",
-      "desc": "repositorio con materiais didácticos de cultura clásica para secundaria."
-    },
-    "latout": {
-      "url": "https://moronbandin.github.io/latout/",
-      "short": "materiais de latín",
-      "desc": "repositorio con materiais para latín en secundaria e bacharelato."
-    },
-    "grego": {
-      "url": "https://moronbandin.github.io/grego/",
-      "short": "materiais de grego",
-      "desc": "repositorio con materiais para grego en secundaria e bacharelato."
-    },
-    "concelhos": {
-      "url": "https://moronbandin.github.io/concelhos/",
-      "short": "xogo dos concellos",
-      "desc": "xogo interactivo de adiviñar todos os concellos da galiza."
-    },
-    "buscaminas": {
-      "url": "https://moronbandin.github.io/buscaminas/",
-      "short": "lumes na Galiza",
-      "desc": "buscaminas reivindicativo para concienciar sobre os incendios forestais na galiza."
-    },
-    "bingogrego": {
-      "url": "https://bingogrego.streamlit.app/",
-      "short": "bingo do alfabeto",
-      "desc": "bingo interactivo do alfabeto grego con xerador de cartóns."
-    },
-    "mermado": {
-      "url": "https://mermado.streamlit.app/",
-      "short": "microtorrado",
-      "desc": "calculadora profesional de merma e beneficio para microtorradores de café."
-    },
-    "wikisalto": {
-      "url": "https://wikisalto.streamlit.app/",
-      "short": "xogo de hipervínculos",
-      "desc": "conecta dúas páxinas reais da wikipedia só con hipervínculos azuis, acumulando puntos."
-    },
-    "graphes": {
-      "url": "https://moronbandin.github.io/graphes/",
-      "short": "galería de imaxes en grego moderno",
-      "desc": "galería interactiva de cartaces, graffitis e pintadas da grecia contemporánea. serve para traballar a continuidade da lingua grega antiga na época actual."
-    }
+[
+  {
+    "name": "graphes",
+    "title": "Graphes",
+    "description": "Galería de letreiros, pintadas e palabras da Grecia contemporánea.",
+    "category": "Humanidades",
+    "language": "CSS",
+    "repo": "https://github.com/moronbandin/graphes",
+    "demo": "https://moronbandin.github.io/graphes/",
+    "featured": true,
+    "fork": false,
+    "updated": "2026-06-18T07:33:27Z"
+  },
+  {
+    "name": "buscaminas",
+    "title": "Buscaminas Galiza",
+    "description": "O buscaminas levado ao mapa galego para falar do territorio, do monte e dos eucaliptais.",
+    "category": "Xogos",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/buscaminas",
+    "demo": "https://moronbandin.github.io/buscaminas/",
+    "featured": true,
+    "fork": false,
+    "updated": "2026-06-18T07:11:13Z"
+  },
+  {
+    "name": "grego",
+    "title": "Suplemento de grego",
+    "description": "Gramática, textos, léxico e recursos para aprender grego clásico.",
+    "category": "Aula",
+    "language": "HTML",
+    "repo": "https://github.com/moronbandin/grego",
+    "demo": "https://moronbandin.github.io/grego/",
+    "featured": true,
+    "fork": false,
+    "updated": "2026-05-18T10:48:50Z"
+  },
+  {
+    "name": "bingo",
+    "title": "Bingo grego",
+    "description": "Bombo interactivo e xerador de cartóns para practicar o alfabeto grego.",
+    "category": "Aula",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/bingo",
+    "demo": "https://bingogrego.streamlit.app/",
+    "featured": true,
+    "fork": false,
+    "updated": "2026-03-13T19:46:45Z"
+  },
+  {
+    "name": "cucla",
+    "title": "Cultura clásica",
+    "description": "Materiais abertos de cultura clásica para secundaria.",
+    "category": "Aula",
+    "language": "HTML",
+    "repo": "https://github.com/moronbandin/cucla",
+    "demo": "https://moronbandin.github.io/cucla/",
+    "featured": true,
+    "fork": false,
+    "updated": "2025-11-24T23:04:11Z"
+  },
+  {
+    "name": "latout",
+    "title": "Materiais de latín",
+    "description": "Leccións, textos e materiais de latín para secundaria e bacharelato.",
+    "category": "Aula",
+    "language": "HTML",
+    "repo": "https://github.com/moronbandin/latout",
+    "demo": "https://moronbandin.github.io/latout/",
+    "featured": true,
+    "fork": false,
+    "updated": "2025-10-02T17:18:02Z"
+  },
+  {
+    "name": "wikisalto",
+    "title": "Wikisalto",
+    "description": "Une dúas páxinas da Wikipedia saltando só polos seus hipervínculos.",
+    "category": "Xogos",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/wikisalto",
+    "demo": "https://wikisalto.streamlit.app/",
+    "featured": true,
+    "fork": false,
+    "updated": "2025-09-18T12:37:18Z"
+  },
+  {
+    "name": "folia",
+    "title": "Folía",
+    "description": "Arquivo aberto de letras e pezas da música tradicional galega.",
+    "category": "Galiza",
+    "language": "HTML",
+    "repo": "https://github.com/moronbandin/folia",
+    "demo": "https://moronbandin.github.io/folia/",
+    "featured": true,
+    "fork": false,
+    "updated": "2024-12-22T17:32:42Z"
+  },
+  {
+    "name": "concelhos",
+    "title": "Concellos",
+    "description": "Xogo interactivo para localizar e aprender os concellos de Galiza.",
+    "category": "Xogos",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/concelhos",
+    "demo": "https://moronbandin.github.io/concelhos/",
+    "featured": true,
+    "fork": false,
+    "updated": "2024-08-27T08:52:20Z"
+  },
+  {
+    "name": "buses-app",
+    "title": "Cando vén o bus?",
+    "description": "Aplicación web instalable para consultar horarios e organizar desprazamentos en bus.",
+    "category": "Ferramentas",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/buses-app",
+    "demo": "https://moronbandin.github.io/buses-app/",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-06-18T07:41:20Z"
+  },
+  {
+    "name": "catao",
+    "title": "Catao",
+    "description": "Prototipo web e laboratorio de ideas publicado como código aberto.",
+    "category": "Experimentos",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/catao",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-06-04T20:35:28Z"
+  },
+  {
+    "name": "editorial",
+    "title": "Editorial",
+    "description": "Ferramentas e fluxos de traballo para edición e publicación dixital.",
+    "category": "Humanidades",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/editorial",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-05-15T20:01:05Z"
+  },
+  {
+    "name": "materiais",
+    "title": "Materiais Logos GNT",
+    "description": "Materiais docentes e recursos abertos do proxecto Logos GNT.",
+    "category": "Aula",
+    "language": "",
+    "repo": "https://github.com/logosgnt/materiais",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-05-07T15:23:54Z"
+  },
+  {
+    "name": "prova",
+    "title": "Prova",
+    "description": "Plataforma experimental con frontend, backend e ferramentas de datos.",
+    "category": "Ferramentas",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/prova",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-04-29T18:22:51Z"
+  },
+  {
+    "name": "textos-grego",
+    "title": "Textos de grego",
+    "description": "Colección e ferramentas para preparar textos de grego clásico.",
+    "category": "Aula",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/textos-grego",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-03-27T12:30:29Z"
+  },
+  {
+    "name": "icaromenipo",
+    "title": "Icaromenipo",
+    "description": "Edición web navegable do Icaromenipo de Luciano.",
+    "category": "Humanidades",
+    "language": "HTML",
+    "repo": "https://github.com/logosgnt/icaromenipo",
+    "demo": "https://logosgnt.github.io/icaromenipo/",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-03-23T12:57:09Z"
+  },
+  {
+    "name": "mcr_docs",
+    "title": "Apuntes MCR",
+    "description": "Edición navegable dos apuntes do mestrado en Ciencias das Relixións.",
+    "category": "Humanidades",
+    "language": "HTML",
+    "repo": "https://github.com/moronbandin/mcr_docs",
+    "demo": "https://moronbandin.github.io/mcr_docs/",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-03-13T17:15:20Z"
+  },
+  {
+    "name": "mcr",
+    "title": "Ciencias das relixións",
+    "description": "Notas e materiais sobre tradicións relixiosas e o seu impacto cultural.",
+    "category": "Humanidades",
+    "language": "",
+    "repo": "https://github.com/moronbandin/mcr",
+    "demo": "https://moronbandin.github.io/mcr/",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-03-13T17:10:41Z"
+  },
+  {
+    "name": "library",
+    "title": "Biblioteca",
+    "description": "Biblioteca dixital e ferramentas para explorar, traducir e traballar con textos.",
+    "category": "Humanidades",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/library",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-02-12T23:21:06Z"
+  },
+  {
+    "name": "logosgnt",
+    "title": "Logos GNT",
+    "description": "Sitio e recursos do proxecto Logos GNT.",
+    "category": "Humanidades",
+    "language": "HTML",
+    "repo": "https://github.com/logosgnt/logosgnt",
+    "demo": "https://logosgnt.github.io/logosgnt/",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-10-10T18:41:09Z"
+  },
+  {
+    "name": "logosgnt",
+    "title": "logosgnt",
+    "description": "Proxecto aberto construído con HTML.",
+    "category": "Experimentos",
+    "language": "HTML",
+    "repo": "https://github.com/moronbandin/logosgnt",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-10-08T20:48:40Z"
+  },
+  {
+    "name": "landing",
+    "title": "Este arquivo",
+    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
+    "category": "Ferramentas",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/landing",
+    "demo": "https://moronbandin.github.io/landing/",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-10-08T16:09:15Z"
+  },
+  {
+    "name": "map",
+    "title": "Fol e ar",
+    "description": "Mapa e arquivo web arredor da música e da cultura tradicional galega.",
+    "category": "Galiza",
+    "language": "JavaScript",
+    "repo": "https://github.com/fol-e-ar/map",
+    "demo": "https://fol-e-ar.github.io/map/",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-08-09T17:12:21Z"
+  },
+  {
+    "name": "vocab",
+    "title": "Vocabulario grego",
+    "description": "Aplicación para estudar vocabulario grego con tarxetas e probas.",
+    "category": "Aula",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/vocab",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-06-16T21:30:52Z"
+  },
+  {
+    "name": "bombo",
+    "title": "Bombo",
+    "description": "Bombo dixital para actividades e dinámicas de aula.",
+    "category": "Aula",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/bombo",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-05-16T10:45:53Z"
+  },
+  {
+    "name": "merma",
+    "title": "Merma",
+    "description": "Calculadora de merma e rendemento para microtorradores de café.",
+    "category": "Ferramentas",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/merma",
+    "demo": "https://mermado.streamlit.app/",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-05-12T16:17:14Z"
+  },
+  {
+    "name": "happyday",
+    "title": "Happy day",
+    "description": "Un pequeno experimento construído con Python.",
+    "category": "Experimentos",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/happyday",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-04-26T15:55:42Z"
+  },
+  {
+    "name": "proens",
+    "title": "Materiais docentes",
+    "description": "Arquivo de recursos, textos, mapas e materiais para distintas materias.",
+    "category": "Aula",
+    "language": "",
+    "repo": "https://github.com/moronbandin/proens",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2025-04-09T15:36:53Z"
+  },
+  {
+    "name": "moronbandin",
+    "title": "Perfil de GitHub",
+    "description": "README e presentación do perfil público de GitHub.",
+    "category": "Ferramentas",
+    "language": "",
+    "repo": "https://github.com/moronbandin/moronbandin",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2024-08-22T10:25:43Z"
+  },
+  {
+    "name": "avaliacion",
+    "title": "avaliacion",
+    "description": "Proxecto aberto construído con Python.",
+    "category": "Experimentos",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/avaliacion",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2024-08-02T20:04:30Z"
+  },
+  {
+    "name": "elementos",
+    "title": "Elementos",
+    "description": "Pequenas ferramentas didácticas e materiais reutilizables.",
+    "category": "Aula",
+    "language": "Python",
+    "repo": "https://github.com/moronbandin/elementos",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2024-05-31T06:38:23Z"
+  },
+  {
+    "name": "language-models",
+    "title": "Modelos de lingua galega",
+    "description": "Modelos de lingua abertos para o galego.",
+    "category": "Galiza",
+    "language": "",
+    "repo": "https://github.com/moronbandin/language-models",
+    "demo": "",
+    "featured": false,
+    "fork": true,
+    "updated": "2024-04-26T10:15:42Z"
+  },
+  {
+    "name": "flashy_flashcards",
+    "title": "Flashy flashcards",
+    "description": "Ferramentas para converter recursos léxicos clásicos en barallas de Anki.",
+    "category": "Aula",
+    "language": "",
+    "repo": "https://github.com/moronbandin/flashy_flashcards",
+    "demo": "",
+    "featured": false,
+    "fork": true,
+    "updated": "2024-03-04T10:07:12Z"
   }
-  
+]

@@ -1,150 +1,156 @@
-let projects = {};
+let projects = [];
+let activeCategory = "Todos";
+
+const grid = document.getElementById("projectsGrid");
+const count = document.getElementById("projectCount");
+const filters = document.getElementById("filters");
+const search = document.getElementById("search");
+const emptyState = document.getElementById("emptyState");
+
+const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, character => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+})[character]);
+
+function projectMatches(project) {
+  const query = search.value.trim().toLocaleLowerCase("gl");
+  const inCategory = activeCategory === "Todos" || project.category === activeCategory;
+  const haystack = [project.name, project.description, project.category, project.language]
+    .join(" ")
+    .toLocaleLowerCase("gl");
+  return inCategory && (!query || haystack.includes(query));
+}
+
+function renderProjects() {
+  const visible = projects.filter(projectMatches);
+  count.textContent = `${visible.length} ${visible.length === 1 ? "proxecto" : "proxectos"}`;
+  emptyState.hidden = visible.length !== 0;
+  grid.innerHTML = visible.map((project, index) => `
+    <article class="project-card${project.featured ? " featured" : ""}">
+      <div class="card-top">
+        <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="project-category">${escapeHtml(project.category)}</span>
+      </div>
+      <h3>${escapeHtml(project.title || project.name)}</h3>
+      <p>${escapeHtml(project.description)}</p>
+      <div class="project-links">
+        ${project.demo ? `<a href="${escapeHtml(project.demo)}" target="_blank" rel="noreferrer">ver proxecto ↗</a>` : ""}
+        <a href="${escapeHtml(project.repo)}" target="_blank" rel="noreferrer">código ↗</a>
+      </div>
+    </article>
+  `).join("");
+}
+
+function renderFilters() {
+  const categories = ["Todos", ...new Set(projects.map(project => project.category))];
+  filters.innerHTML = categories.map(category => `
+    <button class="filter${category === activeCategory ? " active" : ""}" type="button" data-category="${escapeHtml(category)}">
+      ${escapeHtml(category)}
+    </button>
+  `).join("");
+}
+
+filters.addEventListener("click", event => {
+  const button = event.target.closest("[data-category]");
+  if (!button) return;
+  activeCategory = button.dataset.category;
+  renderFilters();
+  renderProjects();
+});
+search.addEventListener("input", renderProjects);
+
 fetch("projects.json")
-  .then(res => res.json())
-  .then(data => { projects = data; });
+  .then(response => {
+    if (!response.ok) throw new Error("Non se puido cargar o catálogo");
+    return response.json();
+  })
+  .then(data => {
+    projects = data.sort((a, b) =>
+      Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
+      (b.updated || "").localeCompare(a.updated || "") ||
+      a.name.localeCompare(b.name)
+    );
+    renderFilters();
+    renderProjects();
+  })
+  .catch(() => {
+    count.textContent = "Erro ao cargar";
+    emptyState.hidden = false;
+    emptyState.textContent = "O catálogo non puido cargarse. Podes velo directamente en GitHub.";
+  });
 
-const output = document.getElementById("output");
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Terminal: unha segunda porta de entrada, non un requisito para navegar.
+const terminal = document.getElementById("terminalDialog");
+const terminalOutput = document.getElementById("terminalOutput");
 const cmdInput = document.getElementById("cmd");
-
-let projectsShown = false; // controla se xa se listaron
-
-// fortunes
 const fortunes = [
-  "the unexamined life is not worth living — socrates",
-  "πάντα ῥεῖ — everything flows — heraclitus",
-  "tempus fugit, memoria manet",
-  "simplicity is the ultimate sophistication — leonardo",
-  "γνῶθι σεαυτόν — know thyself",
-  "alea iacta est — julius caesar",
-  "amor fati — nietzsche",
-  "sapere aude — horace",
-  "carpe diem — horace",
-  "festina lente — augustus",
-  "memento mori",
-  "hoc est vivere bis, vita posse priore frui — martial",
-  "ars longa, vita brevis — hippocrates",
-  "nulla dies sine linea — apelles",
-  "ἓν οἶδα ὅτι οὐδὲν οἶδα — socrates",
-  "per aspera ad astra — seneca",
-  "nosce tempus — know the time",
-  "vita brevis, ars longa",
-  "γλῶττα λανθάνουσα τἀληθῆ λέγει — the tongue speaks truth unconsciously",
-  "ordo ab chao — order from chaos"
+  "πάντα ῥεῖ — todo flúe",
+  "festina lente — apura devagar",
+  "nulla dies sine linea",
+  "γνῶθι σεαυτόν — coñécete a ti mesmo",
+  "tempus fugit, memoria manet"
 ];
 
-// barallamos ao comezar
-let fortuneQueue = [...fortunes].sort(() => Math.random() - 0.5);
+function print(line = "") {
+  terminalOutput.insertAdjacentHTML("beforeend", `${line}<br>`);
+  terminal.scrollTop = terminal.scrollHeight;
+}
 
-function getNextFortune() {
-  if (fortuneQueue.length === 0) {
-    // cando se esgota, barallamos de novo
-    fortuneQueue = [...fortunes].sort(() => Math.random() - 0.5);
+function openTerminal() {
+  if (!terminal.open) terminal.showModal();
+  if (!terminalOutput.children.length) {
+    print("Benvido. Escribe <strong>help</strong> para ver os comandos.");
   }
-  return fortuneQueue.pop();
+  setTimeout(() => cmdInput.focus(), 0);
 }
 
-function print(line) {
-  output.innerHTML += line + "<br>";
-  output.scrollTop = output.scrollHeight;
-}
-
-function runCommand(cmd) {
-  const args = cmd.trim().split(" ");
-  const base = args[0];
-
+function runCommand(rawCommand) {
+  const [base = "", ...args] = rawCommand.trim().split(/\s+/);
+  const query = args.join(" ").toLocaleLowerCase("gl");
   if (!base) return;
-
-  switch (base) {
-    case "help":
-      print("available commands: whoami, whereami, job, ls, info [project], open [project], clear, exit, social");
-      break;
-    case "whoami":
-      print("a. morón — teacher · former ai researcher · galician");
-      break;
-    case "whereami":
-      print("compostela (sometimes vigo, always galiza)");
-      break;
-    case "job":
-      print("teacher of greek & latin");
-      break;
-    case "ls":
-        Object.keys(projects)
-        .sort() // ordénanse as claves alfabéticamente
-        .forEach(k => {
-            const p = projects[k];
-            print(`<a href="${p.url}" target="_blank">${k}/</a> — ${p.short}`);
-        });
-        projectsShown = true;
-        break;
-          case "l": // alias de ls
-      runCommand("ls");
-      break;
-    case "info":
-      if (args[1] && projects[args[1]]) {
-        const p = projects[args[1]];
-        print(`<strong>${args[1]}</strong>: ${p.desc}`);
-      } else {
-        print("usage: info [project]");
-      }
-      break;
-    case "open":
-      if (args[1] && projects[args[1]]) {
-        window.open(projects[args[1]].url, "_blank");
-        print(`opening ${args[1]}...`);
-      } else {
-        print("usage: open [project]");
-      }
-      break;
-    case "clear":
-      output.innerHTML = "";
-      projectsShown = false; // reset ao limpar
-      break;
-    case "cls": // alias de clear
-      runCommand("clear");
-      break;
-    case "exit":
-      window.location.href = "https://github.com/moronbandin";
-      break;
-    case "social":
-      print("github: <a href='https://github.com/moronbandin' target='_blank'>https://github.com/moronbandin</a>");
-      print("twitter: <a href='https://twitter.com/moronbandin' target='_blank'>https://twitter.com/moronbandin</a>");
-      print("email: <a href='mailto:amoronbandin@gmail.com'>amoronbandin@gmail.com</a>");
-      break;
-    case "sudo":
-      print("nice try ;)");
-      break;
-    case "vi":
-    case "nano":
-      print("no editor configured");
-      break;
-    case "fortune":
-      print(getNextFortune());
-      break;
-    default:
-      print(`command not found: ${base}`);
-  }
+  const commands = {
+    help: () => print("comandos: ls, info [proxecto], open [proxecto], whoami, fortune, clear, exit"),
+    whoami: () => print("a. morón — profesor de grego e latín · antigo investigador en IA · galego"),
+    ls: () => projects.forEach(project => print(
+      `<a href="${escapeHtml(project.demo || project.repo)}" target="_blank">${escapeHtml(project.name)}/</a> — ${escapeHtml(project.description)}`
+    )),
+    info: () => {
+      const project = projects.find(item => [item.name, item.title].some(value => value?.toLocaleLowerCase("gl").includes(query)));
+      print(project ? `<strong>${escapeHtml(project.title || project.name)}</strong> — ${escapeHtml(project.description)}` : "uso: info [proxecto]");
+    },
+    open: () => {
+      const project = projects.find(item => [item.name, item.title].some(value => value?.toLocaleLowerCase("gl").includes(query)));
+      if (!project) return print("uso: open [proxecto]");
+      window.open(project.demo || project.repo, "_blank", "noopener");
+      print(`abrindo ${escapeHtml(project.name)}…`);
+    },
+    fortune: () => print(fortunes[Math.floor(Math.random() * fortunes.length)]),
+    clear: () => { terminalOutput.innerHTML = ""; },
+    exit: () => terminal.close()
+  };
+  (commands[base.toLowerCase()] || (() => print(`comando non atopado: ${escapeHtml(base)}`)))();
 }
 
-cmdInput.addEventListener("keydown", e => {
-  if (e.key === "Enter") {
-    const cmd = cmdInput.value;
-    print(`<span class="prompt">moronbandin@gh-pages:~$</span> ${cmd}`);
-    runCommand(cmd);
-    cmdInput.value = "";
+document.getElementById("openTerminal").addEventListener("click", openTerminal);
+document.getElementById("closeTerminal").addEventListener("click", () => terminal.close());
+terminal.addEventListener("click", event => {
+  if (event.target === terminal) terminal.close();
+});
+cmdInput.addEventListener("keydown", event => {
+  if (event.key !== "Enter") return;
+  const command = cmdInput.value;
+  print(`<span class="prompt">moronbandin@galiza:~$</span> ${escapeHtml(command)}`);
+  runCommand(command);
+  cmdInput.value = "";
+});
+document.addEventListener("keydown", event => {
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+    event.preventDefault();
+    openTerminal();
+  }
+  if (event.key === "/" && !terminal.open && document.activeElement !== search) {
+    event.preventDefault();
+    search.focus();
   }
 });
-
-// botón "ver proxectos"
-document.getElementById("showProjects").addEventListener("click", () => {
-  print(`<span class="prompt">moronbandin@gh-pages:~$</span> ls`);
-  if (!projectsShown) {
-    runCommand("ls");
-  } else {
-    print("fai click sobre o proxecto que che interese");
-  }
-});
-
-// permitir escribir facendo click en calquera parte da terminal
-document.querySelector(".content").addEventListener("click", () => {
-    cmdInput.focus();
-  });
