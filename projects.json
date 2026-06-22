@@ -1,5 +1,17 @@
 [
   {
+    "name": "concelhos",
+    "title": "Concellos",
+    "description": "Xogo interactivo para localizar e aprender os concellos de Galiza.",
+    "category": "Xogos",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/concelhos",
+    "demo": "https://moronbandin.github.io/concelhos/",
+    "featured": true,
+    "fork": false,
+    "updated": "2026-06-18T15:18:03Z"
+  },
+  {
     "name": "graphes",
     "title": "Graphes",
     "description": "Galería de letreiros, pintadas e palabras da Grecia contemporánea.",
@@ -96,16 +108,16 @@
     "updated": "2024-12-22T17:32:42Z"
   },
   {
-    "name": "concelhos",
-    "title": "Concellos",
-    "description": "Xogo interactivo para localizar e aprender os concellos de Galiza.",
-    "category": "Xogos",
+    "name": "landing",
+    "title": "Este arquivo",
+    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
+    "category": "Ferramentas",
     "language": "JavaScript",
-    "repo": "https://github.com/moronbandin/concelhos",
-    "demo": "https://moronbandin.github.io/concelhos/",
-    "featured": true,
+    "repo": "https://github.com/moronbandin/landing",
+    "demo": "https://moronbandin.github.io/landing/",
+    "featured": false,
     "fork": false,
-    "updated": "2024-08-27T08:52:20Z"
+    "updated": "2026-06-18T13:39:16Z"
   },
   {
     "name": "buses-app",
@@ -250,18 +262,6 @@
     "featured": false,
     "fork": false,
     "updated": "2025-10-08T20:48:40Z"
-  },
-  {
-    "name": "landing",
-    "title": "Este arquivo",
-    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
-    "category": "Ferramentas",
-    "language": "JavaScript",
-    "repo": "https://github.com/moronbandin/landing",
-    "demo": "https://moronbandin.github.io/landing/",
-    "featured": false,
-    "fork": false,
-    "updated": "2025-10-08T16:09:15Z"
   },
   {
     "name": "map",
