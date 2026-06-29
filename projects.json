@@ -108,6 +108,30 @@
     "updated": "2024-12-22T17:32:42Z"
   },
   {
+    "name": "proens",
+    "title": "Materiais docentes",
+    "description": "Arquivo de recursos, textos, mapas e materiais para distintas materias.",
+    "category": "Aula",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/proens",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-06-23T21:37:14Z"
+  },
+  {
+    "name": "progra-nerea",
+    "title": "progra-nerea",
+    "description": "Proxecto aberto construído con TypeScript.",
+    "category": "Experimentos",
+    "language": "TypeScript",
+    "repo": "https://github.com/moronbandin/progra-nerea",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-06-23T15:00:57Z"
+  },
+  {
     "name": "landing",
     "title": "Este arquivo",
     "description": "O código e o sistema de actualización automática desta colección de proxectos.",
@@ -117,7 +141,7 @@
     "demo": "https://moronbandin.github.io/landing/",
     "featured": false,
     "fork": false,
-    "updated": "2026-06-18T13:39:16Z"
+    "updated": "2026-06-22T12:25:50Z"
   },
   {
     "name": "buses-app",
@@ -322,18 +346,6 @@
     "featured": false,
     "fork": false,
     "updated": "2025-04-26T15:55:42Z"
-  },
-  {
-    "name": "proens",
-    "title": "Materiais docentes",
-    "description": "Arquivo de recursos, textos, mapas e materiais para distintas materias.",
-    "category": "Aula",
-    "language": "",
-    "repo": "https://github.com/moronbandin/proens",
-    "demo": "",
-    "featured": false,
-    "fork": false,
-    "updated": "2025-04-09T15:36:53Z"
   },
   {
     "name": "moronbandin",
