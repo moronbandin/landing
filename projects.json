@@ -108,6 +108,18 @@
     "updated": "2024-12-22T17:32:42Z"
   },
   {
+    "name": "landing",
+    "title": "Este arquivo",
+    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
+    "category": "Ferramentas",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/landing",
+    "demo": "https://moronbandin.github.io/landing/",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-06-29T11:23:29Z"
+  },
+  {
     "name": "proens",
     "title": "Materiais docentes",
     "description": "Arquivo de recursos, textos, mapas e materiais para distintas materias.",
@@ -130,18 +142,6 @@
     "featured": false,
     "fork": false,
     "updated": "2026-06-23T15:00:57Z"
-  },
-  {
-    "name": "landing",
-    "title": "Este arquivo",
-    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
-    "category": "Ferramentas",
-    "language": "JavaScript",
-    "repo": "https://github.com/moronbandin/landing",
-    "demo": "https://moronbandin.github.io/landing/",
-    "featured": false,
-    "fork": false,
-    "updated": "2026-06-22T12:25:50Z"
   },
   {
     "name": "buses-app",
