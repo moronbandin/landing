@@ -9,7 +9,7 @@
     "demo": "https://moronbandin.github.io/concelhos/",
     "featured": true,
     "fork": false,
-    "updated": "2026-08-22T01:16:47Z"
+    "updated": "2026-08-24T23:24:45Z"
   },
   {
     "name": "graphes",
@@ -108,6 +108,30 @@
     "updated": "2024-12-22T17:32:42Z"
   },
   {
+    "name": "xesta",
+    "title": "xesta",
+    "description": "Proxecto aberto construído con tecnoloxías web.",
+    "category": "Experimentos",
+    "language": "",
+    "repo": "https://github.com/moronbandin/xesta",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-08-31T10:38:12Z"
+  },
+  {
+    "name": "prova",
+    "title": "Prova",
+    "description": "Plataforma experimental con frontend, backend e ferramentas de datos.",
+    "category": "Ferramentas",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/prova",
+    "demo": "",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-08-25T23:03:48Z"
+  },
+  {
     "name": "landing",
     "title": "Este arquivo",
     "description": "O código e o sistema de actualización automática desta colección de proxectos.",
@@ -117,7 +141,7 @@
     "demo": "https://moronbandin.github.io/landing/",
     "featured": false,
     "fork": false,
-    "updated": "2026-08-17T07:15:05Z"
+    "updated": "2026-08-24T07:20:31Z"
   },
   {
     "name": "proens",
@@ -190,18 +214,6 @@
     "featured": false,
     "fork": false,
     "updated": "2026-05-07T15:23:54Z"
-  },
-  {
-    "name": "prova",
-    "title": "Prova",
-    "description": "Plataforma experimental con frontend, backend e ferramentas de datos.",
-    "category": "Ferramentas",
-    "language": "JavaScript",
-    "repo": "https://github.com/moronbandin/prova",
-    "demo": "",
-    "featured": false,
-    "fork": false,
-    "updated": "2026-04-29T18:22:51Z"
   },
   {
     "name": "textos-grego",
