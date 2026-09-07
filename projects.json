@@ -9,7 +9,7 @@
     "demo": "https://moronbandin.github.io/concelhos/",
     "featured": true,
     "fork": false,
-    "updated": "2026-08-24T23:24:45Z"
+    "updated": "2026-09-01T15:41:36Z"
   },
   {
     "name": "graphes",
@@ -108,16 +108,28 @@
     "updated": "2024-12-22T17:32:42Z"
   },
   {
-    "name": "xesta",
-    "title": "xesta",
-    "description": "Proxecto aberto construído con tecnoloxías web.",
+    "name": "calendar",
+    "title": "calendar",
+    "description": "Proxecto aberto construído con JavaScript.",
     "category": "Experimentos",
-    "language": "",
-    "repo": "https://github.com/moronbandin/xesta",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/calendar",
     "demo": "",
     "featured": false,
     "fork": false,
-    "updated": "2026-08-31T10:38:12Z"
+    "updated": "2026-09-05T09:12:30Z"
+  },
+  {
+    "name": "landing",
+    "title": "Este arquivo",
+    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
+    "category": "Ferramentas",
+    "language": "JavaScript",
+    "repo": "https://github.com/moronbandin/landing",
+    "demo": "https://moronbandin.github.io/landing/",
+    "featured": false,
+    "fork": false,
+    "updated": "2026-08-31T13:51:29Z"
   },
   {
     "name": "prova",
@@ -130,18 +142,6 @@
     "featured": false,
     "fork": false,
     "updated": "2026-08-25T23:03:48Z"
-  },
-  {
-    "name": "landing",
-    "title": "Este arquivo",
-    "description": "O código e o sistema de actualización automática desta colección de proxectos.",
-    "category": "Ferramentas",
-    "language": "JavaScript",
-    "repo": "https://github.com/moronbandin/landing",
-    "demo": "https://moronbandin.github.io/landing/",
-    "featured": false,
-    "fork": false,
-    "updated": "2026-08-24T07:20:31Z"
   },
   {
     "name": "proens",
