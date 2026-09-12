@@ -4,6 +4,18 @@
     "category": "Experimentos",
     "includeForks": true
   },
+  "includeOnly": [
+    "bingo",
+    "buscaminas",
+    "buses-app",
+    "calendar",
+    "concelhos",
+    "graphes",
+    "landing",
+    "library",
+    "pau",
+    "wikisalto"
+  ],
   "projects": {
     "bingo": {"title":"Bingo grego","category":"Aula","description":"Bombo interactivo e xerador de cartóns para practicar o alfabeto grego.","demo":"https://bingogrego.streamlit.app/","featured":true},
     "bombo": {"title":"Bombo","category":"Aula","description":"Bombo dixital para actividades e dinámicas de aula."},

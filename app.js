@@ -18,13 +18,12 @@ const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, character =
 })[character]);
 
 function projectLabel(project) {
-  return project.title || project.name;
+  return project.name;
 }
 
 function sortProjects(items) {
   return [...items].sort((a, b) =>
-    Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
-    projectLabel(a).localeCompare(projectLabel(b), "gl", { sensitivity: "base" })
+    a.name.localeCompare(b.name, "gl", { sensitivity: "base" })
   );
 }
 

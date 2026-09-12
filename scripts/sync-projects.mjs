@@ -9,6 +9,7 @@ const root = resolve(here, "..");
 const config = JSON.parse(readFileSync(join(root, "projects.config.json"), "utf8"));
 const reposRoot = resolve(process.argv[2] || join(root, ".."));
 const token = process.env.GITHUB_TOKEN;
+const includeOnly = new Set(config.includeOnly || []);
 
 function githubId(remote = "") {
   const match = remote.match(/github(?:-[^.:/]+)?[.:/]([^/]+)\/([^/]+?)(?:\.git)?$/);
@@ -80,6 +81,7 @@ for (const key of Object.keys(config.projects)) {
 const output = [];
 for (const repo of byId.values()) {
   const shortKey = repo.owner.login === config.githubUser ? repo.name : repo.full_name;
+  if (includeOnly.size && !includeOnly.has(shortKey) && !includeOnly.has(repo.full_name)) continue;
   const override = config.projects[repo.full_name] || config.projects[shortKey] || {};
   if (override.include === false || (repo.fork && config.defaults.includeForks === false)) continue;
   output.push({
@@ -98,6 +100,7 @@ for (const repo of byId.values()) {
 
 for (const local of localRepos()) {
   if (local.id) continue;
+  if (includeOnly.size && !includeOnly.has(local.localName)) continue;
   const override = config.projects[local.localName];
   if (!override?.include) continue;
   if (output.some(project => project.repo === override.repo)) continue;
@@ -116,9 +119,7 @@ for (const local of localRepos()) {
 }
 
 output.sort((a, b) =>
-  Number(b.featured) - Number(a.featured) ||
-  b.updated.localeCompare(a.updated) ||
-  a.name.localeCompare(b.name)
+  a.name.localeCompare(b.name, "gl", { sensitivity: "base" })
 );
 writeFileSync(join(root, "projects.json"), `${JSON.stringify(output, null, 2)}\n`);
 console.log(`Catálogo actualizado: ${output.length} proxectos.`);
