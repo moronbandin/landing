@@ -64,12 +64,12 @@
     "title": "Graphes",
     "description": "Galería de letreiros, pintadas e palabras da Grecia contemporánea.",
     "category": "Humanidades",
-    "language": "CSS",
+    "language": "JavaScript",
     "repo": "https://github.com/moronbandin/graphes",
     "demo": "https://moronbandin.github.io/graphes/",
     "featured": true,
     "fork": false,
-    "updated": "2026-06-18T07:33:27Z"
+    "updated": "2026-11-03T19:26:25Z"
   },
   {
     "name": "landing",
@@ -81,7 +81,7 @@
     "demo": "https://moronbandin.github.io/landing/",
     "featured": false,
     "fork": false,
-    "updated": "2026-10-26T12:57:53Z"
+    "updated": "2026-11-02T15:45:49Z"
   },
   {
     "name": "library",
